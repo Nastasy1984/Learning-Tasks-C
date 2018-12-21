@@ -30,15 +30,6 @@ int main()
 	}
 	printf("Sums in columns\n");
 
-	for (int i = 0; i < COL; i++)//looking for the sums in columns
-	{
-		int sum = 0;
-		for (int j = 0; j < ROW; j++)
-		{
-			sum += arr[j][i];
-		}
-		printf("%d\t", sum);
-	}
 	int colMin = 0, colMax = 0;
 	for (int i = 0; i < COL; i++)//looking for the columns with max and min sum
 	{
@@ -47,6 +38,7 @@ int main()
 		{
 			sum += arr[j][i];
 		}
+		printf("%d\t", sum);
 		if (sum > maxSum)
 		{
 			maxSum = sum;
